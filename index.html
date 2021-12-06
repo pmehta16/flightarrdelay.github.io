@@ -91,15 +91,28 @@
         <!-- Heading -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Overview
+                <h2 class="page-header">Overview
                     <small> - An Introduction</small>
-                </h1>
+                </h2>
                 <p>Our project aims at predicting the arrival delay of flight using only information available before 
                     the flight takes off. The target variable (ArrDelay - arrival delay) is a numerical value we 
                     will use regression algorithms only. We will be analyzing a big data set and for such amount of
                     data we need big data tools such as Spark. Spark can store big datasets in cluster memory with
                     paging from disk as required and effectively runs machine learning algorithms without
                     having to sync multiple times to the disk, making them run faster. 
+                    </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Tasks and Approach of implementation
+                    <small>-Steps involved</small>
+                </h2>
+                <p>1. The first step involved is to perform an exploratory Data Analysis by creating a correlation matrix to understand the dataset.
+                   2. Second step is to process the data such that categorical values can be used for Linear regression. This step involves converting variables to numerical values. We will be using StringIndexer and OneHotEncoder libraries for implementing the same.
+                   3. Third step is to split the data into training and test data sets followed by training the data using Linear regression and obtaining a model.
+                   4. Fourth step is to perform Optimization on data by splitting the train data set into training and validating data.
+                   5. Final step is to do hyperparameter tuning to increase the accuracy of our model.
                     </p>
             </div>
         </div>
