@@ -119,20 +119,31 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
+                <h2 class="page-header">Context
+                    <small>-Motivation for Project</small>
+                </h2>
+                <p color = "Black">Air travel is the most preferred way to travel. By 2030, more than 45000 connections will be observed per day on an average metro airport.<br>
+                     This makes it important to study the feasibility of taking a flight. For example:- If a flight from Charlotte to Atlanta takes an average time of <br>
+                     1 hour 18 minutes. But the flight is generally delayed by 20 minutes on average. This could make it impractical for someone as we have to reach the <br> 
+                     airport 1 hour in advance, and also travel time to the airport adds up. Whereas, the same distance can be covered by car in equivalent time. <br>
+                     Hence, Understanding the delay of any particular airline at any given airport is important. This can also be used as a feedback mechanism for <br>
+                     airlines to make sure that the flight is not delayed. Our model will focus on predicting the delay in flights.
+                    </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
                 <h2 class="page-header">About Dataset
                 </h2>
                 <p color = "Black">The data used for this project is taken from the data published by the US Department of Transportation. We have used data <br>
                     from 2008. Size of dataset used - 893 MB. It consists of 7213446 rows and 28 columns. To study the data and relationship between the <br>
                     columns we did a correlation analysis on the dataset to fetch the important set of features. After analysing the data we dropped these columns - <br><br> 
-                    <p color = "Red", font-family = "Courier New"> 'FL_DATE', 'OP_CARRIER_FL_NUM', 'ORIGIN', 'DEST','CRS_DEP_TIME', 'DEP_TIME', 'WHEELS_OFF', 'WHEELS_ON', 'CRS_ARR_TIME','CANCELLED' <br><br>
-                    </p>
+                    <span style=color:darkred> 'FL_DATE', 'OP_CARRIER_FL_NUM', 'ORIGIN', 'DEST','CRS_DEP_TIME', 'DEP_TIME', 'WHEELS_OFF', 'WHEELS_ON', 'CRS_ARR_TIME','CANCELLED' </span><br><br>
                     And we fetched the following set of columns to perform Linear Regression - <br><br>
-                    ['DEP_DELAY', 'TAXI_OUT', 'CRS_ELAPSED_TIME', 'DISTANCE', 'flight_weekday_1', 'flight_weekday_2', 'flight_weekday_3', 'flight_weekday_4', 'flight_weekday_5', 'flight_weekday_6','flight_weekday_7']<br><br>
+                    'DEP_DELAY', 'TAXI_OUT', 'CRS_ELAPSED_TIME', 'DISTANCE', 'flight_weekday_1', 'flight_weekday_2', 'flight_weekday_3', 'flight_weekday_4', 'flight_weekday_5', 'flight_weekday_6','flight_weekday_7']<br><br>
 
                     We plotted the following graph to understand the distribution of delay time on the flight data for 2008 - <br>
                     <img src = "img/piechart.png">
-
-    
                 </p>
 
             </div>
@@ -140,31 +151,22 @@
 
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header">Context
-                    <small>-Motivation for Project</small>
+                <h2 class="page-header">Frameworks and Techniques
                 </h2>
-                <p color = "Black">Air travel is the most preferred way to travel. By 2030, more than 45000 connections will be observed per day on an average metro airport.<br>
-                     This makes it important to study the feasibility of taking a flight. For example:- If a flight from Charlotte to Atlanta takes an average time of <br>
-                     1 hour 18 minutes. But the flight is generally delayed by 20 minutes on average. This could make it impractical for someone as we have to reach the <br> 
-                     airport 1 hour in advance, and also travel time to the airport adds up. Whereas, the same distance can be covered by car in equivalent time. <br>
-                     Hence, Understanding the delay of any particular airline at any given airport is important. This can also be used as a feedback mechanism for <br>
-                     airlines to make sure that the flight is not delayed. Our model will focus on predicting the delay in flights.
+                <h5>Frameworks</h5>
+                <p color = "Black">We have implemented the algorithm using the Pyspark framework. Execution of code was done on the DSBA Hadoop cluster. <br>
+                    Along with Pyspark we have used numpy and pandas libraries to perform operations on the data. For Data Processing we have used OnehotEncoder library. <br><br>
                     </p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="page-header">Context
-                    <small>-Motivation for Project</small>
-                </h2>
-                <p color = "Black">Air travel is the most preferred way to travel. By 2030, more than 45000 connections will be observed per day on an average metro airport.<br>
-                     This makes it important to study the feasibility of taking a flight. For example:- If a flight from Charlotte to Atlanta takes an average time of <br>
-                     1 hour 18 minutes. But the flight is generally delayed by 20 minutes on average. This could make it impractical for someone as we have to reach the <br> 
-                     airport 1 hour in advance, and also travel time to the airport adds up. Whereas, the same distance can be covered by car in equivalent time. <br>
-                     Hence, Understanding the delay of any particular airline at any given airport is important. This can also be used as a feedback mechanism for <br>
-                     airlines to make sure that the flight is not delayed. Our model will focus on predicting the delay in flights.
-                    </p>
+                    <h5>Techniques -</h5>
+                    <pre>
+                        <b>1.) Data Analysis</b>
+                        Firstly, to analyse the problem and dataset we did an exploratory data analysis. Since most variables are numerical we created a correlation
+                        matrix, of the numerical variables, to understand if we can find any correlation between the attributes.  The closer the value is to 1 or -1, 
+                        the more positively or negatively the variables are correlated. A correlation of zero means that the two attributes are not correlated at all.
+                        Looking at the correlation matrix we concluded that the DepDelay (departure delay) is highly correlated to arrival delay, so the departure 
+                        delay might be the most indicative attribute of a flight delay. Also, although weak, there exists a correlation between the TaxiOut and arrival
+                        delay. Therefore we will consider these two as well.
+                    </pre>
             </div>
         </div>
 
