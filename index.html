@@ -140,7 +140,7 @@
                     columns we did a correlation analysis on the dataset to fetch the important set of features. After analysing the data we dropped these columns - <br><br> 
                     <span style=color:darkred> 'FL_DATE', 'OP_CARRIER_FL_NUM', 'ORIGIN', 'DEST','CRS_DEP_TIME', 'DEP_TIME', 'WHEELS_OFF', 'WHEELS_ON', 'CRS_ARR_TIME','CANCELLED' </span><br><br>
                     And we fetched the following set of columns to perform Linear Regression - <br><br>
-                    'DEP_DELAY', 'TAXI_OUT', 'CRS_ELAPSED_TIME', 'DISTANCE', 'flight_weekday_1', 'flight_weekday_2', 'flight_weekday_3', 'flight_weekday_4', 'flight_weekday_5', 'flight_weekday_6','flight_weekday_7']<br><br>
+                    <span style=color:darkred>'DEP_DELAY', 'TAXI_OUT', 'CRS_ELAPSED_TIME', 'DISTANCE', 'flight_weekday_1', 'flight_weekday_2', 'flight_weekday_3', 'flight_weekday_4', 'flight_weekday_5', 'flight_weekday_6','flight_weekday_7'</span><br><br>
 
                     We plotted the following graph to understand the distribution of delay time on the flight data for 2008 - <br>
                     <img src = "img/piechart.png">
@@ -158,15 +158,33 @@
                     Along with Pyspark we have used numpy and pandas libraries to perform operations on the data. For Data Processing we have used OnehotEncoder library. <br><br>
                     </p>
                     <h5>Techniques -</h5>
-                    <pre>
-                        <b>1.) Data Analysis</b>
-                        Firstly, to analyse the problem and dataset we did an exploratory data analysis. Since most variables are numerical we created a correlation
-                        matrix, of the numerical variables, to understand if we can find any correlation between the attributes.  The closer the value is to 1 or -1, 
-                        the more positively or negatively the variables are correlated. A correlation of zero means that the two attributes are not correlated at all.
-                        Looking at the correlation matrix we concluded that the DepDelay (departure delay) is highly correlated to arrival delay, so the departure 
-                        delay might be the most indicative attribute of a flight delay. Also, although weak, there exists a correlation between the TaxiOut and arrival
-                        delay. Therefore we will consider these two as well.
-                    </pre>
+<pre>
+<b>1.) Data Analysis</b>
+    Firstly, to analyse the problem and dataset we did an exploratory data analysis. Since most variables are numerical we created a correlation
+    matrix, of the numerical variables, to understand if we can find any correlation between the attributes.  The closer the value is to 1 or -1, 
+    the more positively or negatively the variables are correlated. A correlation of zero means that the two attributes are not correlated at all.
+    Looking at the correlation matrix we concluded that the DepDelay (departure delay) is highly correlated to arrival delay, so the departure 
+    delay might be the most indicative attribute of a flight delay. Also, although weak, there exists a correlation between the TaxiOut and arrival
+    delay. Therefore we will consider these two as well.
+
+<b>2.) Cleaning the data</b>
+    We used the .drop() function to drop all the variables that were concerned with the details after the flight took off and also variables that 
+    were too correlated between themselves and could be redundant to the model causing the model to overfit. We also dropped cancelled flights and 
+    variables that were not correlated to the arrival delay.
+ 
+<b>3.) Data Processing</b>
+    To use the categorical variables in the regression algorithm, further processing was needed. The variables were converted to numerical values by 
+    applying OneHotEncoder. Data after performing OneHot encoding - 
+    <br>
+    <img src = "img/ohe_1.png">
+    <br>
+    <img src = "img/ohe_2.png">
+    <br>
+<b>3.) Training the model</b>
+    We found that variables - departure delay and arrival delay displayed a high correlation and so were used for performing Linear Regression. We split
+    the data into train and test sets in the ratio 80:20. We performed the linear regression following these steps - converting the categorical values (if
+    it applies) to numerical ones, then assembling all in a features vector and running the machine learning algorithm to obtain a model.    
+</pre>
             </div>
         </div>
 
