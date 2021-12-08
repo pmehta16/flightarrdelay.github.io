@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>Corporate 1</title>
+    <title>ITCS 6190 - Project</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -123,11 +123,18 @@
                 </h2>
                 <p color = "Black">The data used for this project is taken from the data published by the US Department of Transportation. We have used data <br>
                     from 2008. Size of dataset used - 893 MB. It consists of 7213446 rows and 28 columns. To study the data and relationship between the <br>
-                    columns we did a correlation analysis on the dataset to fetch the important set of features. After analysing the data we dropped these columns - <br><br> <br><br>
+                    columns we did a correlation analysis on the dataset to fetch the important set of features. After analysing the data we dropped these columns - <br><br> 
                     <p color = "Red", font-family = "Courier New"> 'FL_DATE', 'OP_CARRIER_FL_NUM', 'ORIGIN', 'DEST','CRS_DEP_TIME', 'DEP_TIME', 'WHEELS_OFF', 'WHEELS_ON', 'CRS_ARR_TIME','CANCELLED' <br><br>
                     </p>
                     And we fetched the following set of columns to perform Linear Regression - <br><br>
-                    </p>
+                    ['DEP_DELAY', 'TAXI_OUT', 'CRS_ELAPSED_TIME', 'DISTANCE', 'flight_weekday_1', 'flight_weekday_2', 'flight_weekday_3', 'flight_weekday_4', 'flight_weekday_5', 'flight_weekday_6','flight_weekday_7']<br><br>
+
+                    We plotted the following graph to understand the distribution of delay time on the flight data for 2008 - <br>
+                    <img src = "img/piechart.png">
+
+    
+                </p>
+
             </div>
         </div>
 
