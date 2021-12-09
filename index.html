@@ -110,7 +110,7 @@
                 </h2>
                 <p color = "Black">1. The first step involved is to perform an exploratory Data Analysis by creating a correlation matrix to understand the dataset.<br>
                    2. Second step is to process the data such that categorical values can be used for Linear regression. This step involves converting variables to <br>
-                   numerical values. We will be using StringIndexer and OneHotEncoder libraries for implementing the same.<br>
+                   numerical values. We will be using OneHotEncoder library for implementing the same.<br>
                    3. Third step is to split the data into training and test data sets followed by training the data using Linear regression and obtaining a model.<br>
                    4. Fourth step is to perform Optimization on data by splitting the train data set into training and validating data.<br>
                    5. Final step is to do hyperparameter tuning to increase the accuracy of our model.<br>
@@ -136,13 +136,13 @@
                 <h2 class="page-header">About Dataset
                 </h2>
                 <p color = "Black">The data used for this project is taken from the data published by the US Department of Transportation. We have used data <br>
-                    from 2008. Size of dataset used - 893 MB. It consists of 7213446 rows and 28 columns. To study the data and relationship between the <br>
+                    from 2018. Size of dataset used - 893 MB. It consists of 7213446 rows and 28 columns. To study the data and relationship between the <br>
                     columns we did a correlation analysis on the dataset to fetch the important set of features. After analysing the data we dropped these columns - <br><br> 
                     <span style=color:darkred> 'FL_DATE', 'OP_CARRIER_FL_NUM', 'ORIGIN', 'DEST','CRS_DEP_TIME', 'DEP_TIME', 'WHEELS_OFF', 'WHEELS_ON', 'CRS_ARR_TIME','CANCELLED' </span><br><br>
                     And we fetched the following set of columns to perform Linear Regression - <br><br>
                     <span style=color:darkred>'DEP_DELAY', 'TAXI_OUT', 'CRS_ELAPSED_TIME', 'DISTANCE', 'flight_weekday_1', 'flight_weekday_2', 'flight_weekday_3', 'flight_weekday_4', 'flight_weekday_5', 'flight_weekday_6','flight_weekday_7'</span><br><br>
 
-                    We plotted the following graph to understand the distribution of delay time on the flight data for 2008 - <br>
+                    We plotted the following graph to understand the distribution of delay time on the flight data for 2018 - <br>
                     <img src = "img/piechart.png">
                 </p>
 
@@ -168,7 +168,7 @@
     delay. Therefore we will consider these two as well.
 
 <b>2.) Cleaning the data</b>
-    We used the .drop() function to drop all the variables that were concerned with the details after the flight took off and also variables that 
+    We used the .drop() function to drop all the columns that were concerned with the details after the flight took off and also columns that 
     were too correlated between themselves and could be redundant to the model causing the model to overfit. We also dropped cancelled flights and 
     variables that were not correlated to the arrival delay.
  
