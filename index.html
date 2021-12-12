@@ -112,7 +112,7 @@
                    2. Second step is to process the data such that categorical values can be used for Linear regression. This step involves converting variables to <br>
                    numerical values. We will be using OneHotEncoder library for implementing the same.<br>
                    3. Third step is to scale the dataset to fit the model followed by splitting the data into training and test data sets.<br>
-                   4. Fourth step is to perform Liner Regression on the data using Gradient Descent.
+                   4. Fourth step is to perform Liner Regression on the data using Gradient Descent.<br>
                    5. Final step is to do compute the predictions for the test data followed by computing the R2 score to evaluate models performance<br>
                 </p>
             </div>
@@ -194,7 +194,8 @@ weights and bias. Below graph shows the convergence of Gradient Descent Loss fun
     <br>
 <b>6.) Result</b>
     To conclude we have computed the y_pred (Predictions on our test data), r2 score (goodness of fit of the regression model) and plotted the graph showing 
-    the predictions as computed using Linear Regression.
+    the predictions as computed using Linear Regression. We have tested the performace of our model by performing a hyperparameter tuning by changing the value
+    of alpha and computed the r2 scores for different cases.
 </pre>
             </div>
         </div>
@@ -204,12 +205,18 @@ weights and bias. Below graph shows the convergence of Gradient Descent Loss fun
                     <small>-Results</small>
                 </h2>
                 <p>
-    We calculated the following metrics to evaluate the models performance - <br><br>
+    We computed the following metrics and graphs to evaluate the models performance - <br><br>
+    <h4>With alpah = 0.01</h4>
     <b> <span style=color:darkred> a.) R2 score = 0.9449527520902039 </span> <br></b>
                 
     <b><span style=color:darkred> b.) Linear regression - Data plot  </span> <br></b>
     <img src="img/result.png">
+    
+    <!-- <h4>With alpah = 0.001</h4>
+    <b> <span style=color:darkred> a.) R2 score = 0.9449527520902039 </span> <br></b>
                 
+    <b><span style=color:darkred> b.) Linear regression - Data plot  </span> <br></b>
+    <img src="img/result.png"> -->
                 </p>
             </div>
         </div>
@@ -219,8 +226,8 @@ weights and bias. Below graph shows the convergence of Gradient Descent Loss fun
                 <h2 class="page-header">Final Project Accomplishment stages
                 </h2>
                 <p color = "Black">
-                    a.) Least - The final project will be able to predict the arrival delay of flight using Linear 
-                    Regression. <br>
+                    a.) Least - The final project will be able to predict the arrival delay an find its accuracy by calculating the R2 score
+                    using Linear Regression <br>
                     b.) Will try - Use gradient Descent with the regression model. <br>
                     c.) Aim - Achieve an optimal model by applying regularization and different loss functions.
                     Hyperparameter tuning to increase the accuracy of our model.<br>
@@ -242,7 +249,7 @@ weights and bias. Below graph shows the convergence of Gradient Descent Loss fun
                     1.) Performing an exploratory Data Analysis by creating a correlation matrix to understand the dataset.<br>                    <br>
                     2.) Data Preprocessing steps such as cleaning and scaling the data<br>
                     3.) Perform hyperparameter tuning to increase the accuracy of our model. <br>
-                    4.) Working on the Report<br><br>
+                    4.) Working on the Report<br>
                  </p>
             </div>
         </div>
@@ -279,7 +286,7 @@ weights and bias. Below graph shows the convergence of Gradient Descent Loss fun
         
         <div class="small-print">
             <div class="container">
-                <p>Submitted By : Mohit Gupta () and Pranjali Mehta ()</p>
+                <p style=color:black><h3>Submitted By : Mohit Gupta (8011199727) and Pranjali Mehta (801255574)</h3></p>
             </div>
         </div>
     </footer>
