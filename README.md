@@ -14,4 +14,7 @@ pyspark, numpy, pandas, matplotlib, sklearn
 https://www.kaggle.com/yuanyuwendymu/airline-delay-and-cancellation-data-2009-2018?select=2011.csv
 
 3.) To run the code - 
-python3 flights.py
+python3 flights_arr_delay.py
+
+4.) Link to Project Report - 
+https://pmehta16.github.io/flightarrdelay.github.io/

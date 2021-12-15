@@ -212,11 +212,36 @@ weights and bias. Below graph shows the convergence of Gradient Descent Loss fun
                 </h2>
                 <p>
     We computed the following metrics and graphs to evaluate the models performance - <br><br>
+    Graph Plot Description: 
+    Red color = Y axis : Predicted Arrival Delay and X-axis : List of all Independent Features 
+    Black color = Y-axis : Actual Arrival Delay and X-axis : Independent Feature (Departure Delay)
+    <h3>Without Regularization</h3>
     <h4>With alpha = 0.01</h4>
     <b> <span style=color:darkred> a.) R2 score = 0.9449527520902039 </span> <br></b>
+    <b><span style=color:darkred> b.) Linear regression - Data plot </span> <br></b>
+    
+    <img src="img/both001.PNG">
+
+    <h4>With alpha = 0.001</h4>
+    <b> <span style=color:darkred> a.) R2 score = 0.5736573766646317 </span> <br></b>
                 
     <b><span style=color:darkred> b.) Linear regression - Data plot  </span> <br></b>
-    <img src="img/result.png">
+    <img src="img/alpha0001lambda0.PNG">
+
+    <h4>With Regularization setting value of lambda as = 1</h4>
+    Here we saw that due to higher penalty, our model underfits.
+    <h4>With alpha = 0.01</h4>
+    <b> <span style=color:darkred> a.) R2 score = 0.7137557543371771  </span> <br></b>
+                
+    <b><span style=color:darkred> b.) Linear regression - Data plot  </span> <br></b>
+    <img src="img/lambda1alpha001.PNG">
+
+    <h4>With alpha = 0.001</h4>
+    <b> <span style=color:darkred> a.) R2 score = 0.5023864474173623  </span> <br></b>
+                
+    <b><span style=color:darkred> b.) Linear regression - Data plot  </span> <br></b>
+    <img src="img/lambda1alpha0001.PNG">
+    
     
     <!-- <h4>With alpah = 0.001</h4>
     <b> <span style=color:darkred> a.) R2 score = 0.9449527520902039 </span> <br></b>
